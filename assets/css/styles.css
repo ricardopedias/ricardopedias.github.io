@@ -1,0 +1,499 @@
+/*
+|--------------------------------------------------------------------------
+| CSS Responsivo
+|--------------------------------------------------------------------------
+|
+| Modo Mobile First
+|
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+body > header,
+body > footer,
+body > section,
+body > article {
+  display: block;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Video Background
+|--------------------------------------------------------------------------
+*/
+
+body > .video-background {
+  position: relative;
+  color: #fff;
+}
+
+body > .video-background .video-wrapper,
+body > .video-background .video-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body > .video-background .video-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+body > .video-background .video-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body > .video-background .container,
+body > .video-background .container-fluid {
+  position: relative;
+  text-shadow: 0px 0px 5px #000;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Picture Background
+|--------------------------------------------------------------------------
+*/
+
+body > .picture-background {
+  position: relative;
+  color: #fff;
+}
+
+body > .picture-background .picture-wrapper,
+body > .picture-background .picture-overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body > .picture-background .picture-wrapper picture {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+body > .picture-background .picture-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body > .picture-background .container,
+body > .picture-background .container-fluid {
+  position: relative;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Bloco de InformaÃ§Ãµes
+|--------------------------------------------------------------------------
+*/
+
+.features i {
+  display: inline-block;
+  font-size: 3.5em;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.05);
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| CabeÃ§alho
+|--------------------------------------------------------------------------
+*/
+
+body > header {
+  background: #eee;
+  background-image: url(../imgs/bg-header.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-top: 5px solid #007bff;
+}
+
+body > header > .container > div a img {
+  width: 400px;
+  max-width: 100%;
+}
+
+body > header > .container > div p {
+  margin: 0px;
+  padding: 10px;
+  padding-left: 70px;
+}
+
+body > header > .container > div p,
+body > header > .container > div p span,
+body > header > .container > div p b {
+  display: block;
+}
+
+body > header > .container > div p span {
+  font-weight: 200;
+  color: #fff;
+}
+
+body > header > .container > div p b {
+  margin-top: -.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #cce5ff;
+}
+
+body > header > .container > div p::before {
+  float: left;
+  display: block;
+  margin-left: -60px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  text-align: center;
+  color: #868e96;
+  border: 1px solid #555b61;
+  border-radius: 50%;
+  background: rgba(134, 142, 150, 0.1);
+}
+
+body > header > .container > div:nth-child(2) p::before {
+  font-family: FontAwesome;
+  content: "\F041" !important;
+}
+
+body > header > .container > div:nth-child(3) p::before {
+  font-family: FontAwesome;
+  content: "\f232" !important;
+}
+
+@media (max-width: 767px) {
+  body > header > .container > div {
+    text-align: center;
+  }
+
+  body > header > .container > div p {
+    display: inline-block;
+    width: 310px;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Main Navbar
+|--------------------------------------------------------------------------
+*/
+
+body > .main-navbar {
+  border-bottom: 5px solid #007bff;
+  background: #060708;
+}
+
+body > .main-navbar > nav {
+  font-weight: 500;
+}
+
+body > .main-navbar > nav .navbar-toggler {
+  outline: none;
+  cursor: pointer;
+}
+
+body > .main-navbar > nav .navbar-toggler:hover {
+  background: #007bff;
+}
+
+body > .main-navbar > nav .nav-item:hover {
+  background: #006fe6;
+}
+
+body > .main-navbar > nav .navbar-nav .nav-link {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 991px) {
+  body > .main-navbar > nav #mainNavbar > ul {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media (min-width: 992px) {
+  body > .main-navbar > nav {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 576px) {
+  body > .main-navbar > nav {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 768px) {
+  body > .main-navbar > nav {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 992px) {
+  body > .main-navbar > nav {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 992px) and (min-width: 1200px) {
+  body > .main-navbar > nav {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 991px) {
+  body > .main-navbar > nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  body > .main-navbar > nav .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  body > .main-navbar > nav .navbar-toggler {
+    margin-right: 1rem;
+  }
+
+  body > .main-navbar > nav .navbar-collapse {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.01);
+  }
+
+  body > .main-navbar > nav .nav-item {
+    width: 33.3%;
+  }
+
+  body > .main-navbar > nav .nav-item:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+}
+
+@media (max-width: 767px) {
+  body > .main-navbar > nav .nav-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  body > .main-navbar > nav .nav-item {
+    width: 100%;
+  }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Slider
+|--------------------------------------------------------------------------
+*/
+
+body > .main-slider {
+  background: #007aeb;
+}
+
+body > .main-slider .carousel-item .img-fluid {
+  width: 100%;
+}
+
+body > .main-slider .carousel-item a {
+  display: block;
+  width: 100%;
+}
+
+body > .main-slider .carousel-control-prev span,
+body > .main-slider .carousel-control-next span {
+  width: 50px;
+  height: 50px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Call to Action
+|--------------------------------------------------------------------------
+*/
+
+body > .callaction {
+  background: #007bff;
+  color: #fff;
+  padding: 20px 0;
+}
+
+body > .callaction p {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+body > .callaction p a {
+  display: block;
+  color: #fff;
+}
+
+body > .callaction p a:hover {
+  color: #e6e5e5 !important;
+  text-decoration: none;
+}
+
+body > .callaction p:nth-child(3) {
+  min-width: 200px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.2);
+  vertical-align: middle !important;
+}
+
+/*
+|--------------------------------------------------------------------------
+| RodapÃ©
+|--------------------------------------------------------------------------
+*/
+
+body > footer {
+  background: #292d32;
+  width: 100%;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+body > footer.menu-two-cols h4 i {
+  color: #007bff;
+}
+
+body > footer.menu-two-cols a img {
+  max-width: 250px;
+  -webkit-filter: grayscale(100%) brightness(-30%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) brightness(-30%);
+  opacity: 0.5;
+}
+
+body > footer.menu-two-cols .nav-link {
+  padding: 0;
+  color: #cccccc;
+}
+
+body > footer.menu-two-cols .nav-link:hover {
+  color: #999999;
+}
+
+body > footer .footer-bottom {
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  background: #060708;
+  border-bottom: 5px solid #007bff;
+}
+
+body > footer .footer-bottom small {
+  font-weight: 200;
+}
+
+body > footer .footer-bottom small a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+body > footer .footer-bottom small a:hover {
+  color: #fff;
+}
+
+body > footer .footer-bottom .social a {
+  font-size: 2em;
+  padding: 0 10px;
+  color: #fff;
+}
+
+body > footer .footer-bottom .social a:hover {
+  color: #cccccc;
+}
+
+.contact-3 .contact-details,
+.contact-4 .contact-details {
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+}
+
+.form-control-custom {
+  border: 0.1rem solid #dfe1e5;
+  width: 100%;
+  padding: 1rem;
+  font-size: .9rem;
+  color: #696b6e;
+  border-radius: .3rem;
+}
+
+.form-control-custom:focus {
+  border: 0.1rem solid #59a0d7;
+  outline: none;
+}
+
+.social {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social li a {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin: .4rem .1rem;
+  text-align: center;
+  text-decoration: none;
+  background: #fff;
+  color: #696b6e;
+  border: 0.1rem solid #dfe1e5;
+  border-radius: 499rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.social li a:hover {
+  color: #59a0d7;
+  border-color: #59a0d7;
+}
