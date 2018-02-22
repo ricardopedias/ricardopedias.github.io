@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="450"
-   height="90"
-   viewBox="0 0 450.00005 90"
+   width="602"
+   height="120"
+   viewBox="0 0 602.00007 120"
    id="svg4982"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -294,9 +294,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2519898"
-     inkscape:cx="240.69259"
-     inkscape:cy="71.952381"
+     inkscape:zoom="1"
+     inkscape:cx="242.78699"
+     inkscape:cy="26.872329"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -318,7 +318,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -326,26 +326,28 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Camada 2"
-     sodipodi:insensitive="true"
-     style="display:none">
-    <image
-       sodipodi:absref="/home/ricardo/Imagens/Captura de tela de 2018-02-21 13-02-25.png"
-       y="-159.48109"
-       x="-623.79663"
-       id="image118"
-       xlink:href="file:///home/ricardo/Imagens/Captura%20de%20tela%20de%202018-02-21%2013-02-25.png"
-       preserveAspectRatio="none"
-       height="1100.2711"
-       width="1956.9926" />
+     style="display:inline"
+     transform="translate(0,30)"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:#0e0e0e;fill-opacity:1;stroke-width:1.04336357"
+       id="rect913"
+       width="602"
+       height="120"
+       x="0"
+       y="-30"
+       rx="0"
+       ry="0" />
   </g>
   <g
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-962.36238)"
+     transform="translate(0,-932.36238)"
      style="display:inline">
     <g
-       id="g703">
+       id="g703"
+       transform="matrix(1.3770994,0,0,1.3770994,-5.2445068,-396.18919)">
       <g
          id="g661">
         <circle
@@ -492,7 +494,7 @@
     <g
        style="display:inline"
        id="g5528-8"
-       transform="matrix(2.0616654,0,0,2.0616654,-1140.5408,-1167.4871)">
+       transform="matrix(2.8388716,0,0,2.8388716,-1562.7024,-1981.9622)">
       <g
          id="g4255-2"
          transform="matrix(0.44656389,0,0,0.44656391,549.23467,978.19193)">

@@ -134,10 +134,12 @@ body > .picture-background .container-fluid {
 */
 
 body > header {
-  background: #eee;
-  background-image: url(../imgs/bg-header.jpg);
-  background-size: cover;
-  background-position: center center;
+  background: #101010;
+  background-image: url(../imgs/bg-header.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  /*background-size: cover;
+  background-position: center center;*/
   border-top: 5px solid #007bff;
 }
 
@@ -216,6 +218,7 @@ body > header > .container > div:nth-child(3) p::before {
 
 body > .main-navbar {
   border-bottom: 5px solid #007bff;
+  border-top: 1px solid rgba(255,255,255,0.1);
   background: #060708;
 }
 
