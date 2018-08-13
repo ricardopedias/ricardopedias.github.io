@@ -1,0 +1,12 @@
+
+// Web Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+@import "~bootstrap/scss/bootstrap";
+
+// Font Awesome 5
+$fa-font-path: "/admin/fonts/fontawesome5" !default;
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";

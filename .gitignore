@@ -1,0 +1,7 @@
+/nbproject
+/node_modules
+/vendor
+/.idea
+/mix-manifest.json
+/package-lock.json
+/composer.lock
