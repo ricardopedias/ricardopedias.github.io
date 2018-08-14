@@ -15,6 +15,7 @@
         "bootstrap-datepicker": "^1.7.1",
         "cross-env": "^5.1",
         "html5shiv": "^3.7.3",
+        "axios": "^0.16.2",
         "jquery": "^3.2",
         "jquery-confirm": "^3.3.2",
         "laravel-mix": "^2.0",
