@@ -13685,7 +13685,7 @@ Popper.Defaults = Defaults;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(42);
+module.exports = __webpack_require__(43);
 
 
 /***/ }),
@@ -13723,7 +13723,7 @@ try {
     __webpack_require__(40);
 
     // Implementações do site
-    __webpack_require__(47);
+    __webpack_require__(42);
 } catch (e) {}
 
 /***/ }),
@@ -39954,16 +39954,6 @@ if(typeof jQuery==="undefined"){throw new Error("jquery-confirm requires jQuery"
 /* 42 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */
-/***/ (function(module, exports) {
-
 
 /**
  * --------------------------------------------------------------------------
@@ -40003,6 +39993,12 @@ $(window).resize(function () {
         }, delta);
     }
 });
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
