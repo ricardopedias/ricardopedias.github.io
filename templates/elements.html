@@ -145,12 +145,12 @@
 
                                 <h4>Icons</h4>
 
-                                <a href="#" class="fab fa-twitter"><span class="label">Twitter</span></a>
-                                <a href="#" class="fab fa-facebook"><span class="label">Facebook</span></a>
-                                <a href="#" class="fab fa-instagram"><span class="label">Instagram</span></a>
-                                <a href="#" class="fab fa-github"><span class="label">Github</span></a>
-                                <a href="#" class="fab fa-dribbble"><span class="label">Dribbble</span></a>
-                                <a href="#" class="fab fa-tumblr"><span class="label">Tumblr</span></a>
+                                <a href="#" class="fa fa-twitter"><span class="label">Twitter</span></a>
+                                <a href="#" class="fa fa-facebook"><span class="label">Facebook</span></a>
+                                <a href="#" class="fa fa-instagram"><span class="label">Instagram</span></a>
+                                <a href="#" class="fa fa-github"><span class="label">Github</span></a>
+                                <a href="#" class="fa fa-dribbble"><span class="label">Dribbble</span></a>
+                                <a href="#" class="fa fa-tumblr"><span class="label">Tumblr</span></a>
 
                             </div>
                         </div>
@@ -251,8 +251,16 @@
 
                         <!-- Blockquote -->
                         <h3>Blockquote</h3>
-                        <blockquote>
-                            Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Lorem ipsum dolor. Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                        <blockquote class="blockquote">
+                            <p class="mb-0">
+                                Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum.
+                                Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                                Integer ac pellentesque praesent. Lorem ipsum dolor.
+                                Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum.
+                                Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                            </p>
+
+                            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                         </blockquote>
 
                         <div class="mt-4"></div>
@@ -479,120 +487,126 @@
                 </div>
                 <div class="col-12 col-md-6">
 
-                                                <!-- Buttons -->
-                                                    <h3>Buttons</h3>
-                                                    <ul class="actions">
-                                                        <li><a href="#" class="button primary">Primary</a></li>
-                                                        <li><a href="#" class="button">Default</a></li>
-                                                    </ul>
-                                                    <ul class="actions">
-                                                        <li><a href="#" class="button large">Large</a></li>
-                                                        <li><a href="#" class="button">Default</a></li>
-                                                        <li><a href="#" class="button small">Small</a></li>
-                                                    </ul>
-                                                    <ul class="actions">
-                                                        <li><a href="#" class="button primary large">Large</a></li>
-                                                        <li><a href="#" class="button primary">Default</a></li>
-                                                        <li><a href="#" class="button primary small">Small</a></li>
-                                                    </ul>
-                                                    <ul class="actions fit">
-                                                        <li><a href="#" class="button primary fit">Fit</a></li>
-                                                        <li><a href="#" class="button fit">Fit</a></li>
-                                                    </ul>
-                                                    <ul class="actions fit small">
-                                                        <li><a href="#" class="button primary fit small">Fit + Small</a></li>
-                                                        <li><a href="#" class="button fit small">Fit + Small</a></li>
-                                                    </ul>
-                                                    <ul class="actions">
-                                                        <li><a href="#" class="button primary icon fa-search">Icon</a></li>
-                                                        <li><a href="#" class="button icon fa-download">Icon</a></li>
-                                                    </ul>
-                                                    <ul class="actions">
-                                                        <li><span class="button primary disabled">Primary</span></li>
-                                                        <li><span class="button disabled">Default</span></li>
-                                                    </ul>
+                    <!-- Buttons -->
+                    <h3>Buttons</h3>
 
-                                                <!-- Form -->
-                                                    <h3>Form</h3>
+                    <a href="#" class="btn btn-primary">Default</a>
+                    <a href="#" class="btn btn-outline-primary">Default</a>
 
-                                                    <form method="post" action="#">
-                                                        <div class="row gtr-uniform">
-                                                            <div class="col-6 col-12-xsmall">
-                                                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                                                            </div>
-                                                            <div class="col-6 col-12-xsmall">
-                                                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                                                            </div>
-                                                            <!-- Break -->
-                                                            <div class="col-12">
-                                                                <select name="demo-category" id="demo-category">
-                                                                    <option value="">- Category -</option>
-                                                                    <option value="1">Manufacturing</option>
-                                                                    <option value="1">Shipping</option>
-                                                                    <option value="1">Administration</option>
-                                                                    <option value="1">Human Resources</option>
-                                                                </select>
-                                                            </div>
-                                                            <!-- Break -->
-                                                            <div class="col-4 col-12-small">
-                                                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                                                <label for="demo-priority-low">Low</label>
-                                                            </div>
-                                                            <div class="col-4 col-12-small">
-                                                                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                                                <label for="demo-priority-normal">Normal</label>
-                                                            </div>
-                                                            <div class="col-4 col-12-small">
-                                                                <input type="radio" id="demo-priority-high" name="demo-priority">
-                                                                <label for="demo-priority-high">High</label>
-                                                            </div>
-                                                            <!-- Break -->
-                                                            <div class="col-6 col-12-small">
-                                                                <input type="checkbox" id="demo-copy" name="demo-copy">
-                                                                <label for="demo-copy">Email me a copy</label>
-                                                            </div>
-                                                            <div class="col-6 col-12-small">
-                                                                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                                                <label for="demo-human">I am a human</label>
-                                                            </div>
-                                                            <!-- Break -->
-                                                            <div class="col-12">
-                                                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                                                            </div>
-                                                            <!-- Break -->
-                                                            <div class="col-12">
-                                                                <ul class="actions">
-                                                                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                                                                    <li><input type="reset" value="Reset" /></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </form>
+                    <div class="mt-4"></div>
+
+                    <a href="#" class="btn btn-lg btn-primary">Default</a>
+                    <a href="#" class="btn btn-md btn-primary">Default</a>
+                    <a href="#" class="btn btn-sm btn-primary">Default</a>
+
+                    <div class="row mt-4">
+
+                        <div class="col-12 col-md-6">
+                            <a href="#" class="btn btn-primary btn-block">Default</a>
+                            <a href="#" class="btn btn-outline-primary btn-block">Default</a>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <a href="#" class="btn btn-sm btn-primary btn-block">Default</a>
+                            <a href="#" class="btn btn-sm btn-outline-primary btn-block">Default</a>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-4"></div>
+
+                    <a href="#" class="btn btn-primary"><i class="fa fa-search"></i>Default</a>
+                    <a href="#" class="btn btn-outline-primary"><i class="fa fa-search"></i>Default</a>
+
+                    <div class="mt-4"></div>
+
+                    <a href="#" class="btn btn-primary disabled">Default</a>
+                    <a href="#" class="btn btn-outline-primary disabled">Default</a>
+
+                    <div class="mt-4"></div>
+
+                    <!-- Form -->
+                    <h3>Form</h3>
+
+                    <form method="post" action="#">
+                        
+                        <div class="row gtr-uniform">
+                            <div class="col-6 col-12-xsmall">
+                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                            </div>
+                            <div class="col-6 col-12-xsmall">
+                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                            </div>
+                            <!-- Break -->
+                            <div class="col-12">
+                                <select name="demo-category" id="demo-category">
+                                    <option value="">- Category -</option>
+                                    <option value="1">Manufacturing</option>
+                                    <option value="1">Shipping</option>
+                                    <option value="1">Administration</option>
+                                    <option value="1">Human Resources</option>
+                                </select>
+                            </div>
+                            <!-- Break -->
+                            <div class="col-4 col-12-small">
+                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+                                <label for="demo-priority-low">Low</label>
+                            </div>
+                            <div class="col-4 col-12-small">
+                                <input type="radio" id="demo-priority-normal" name="demo-priority">
+                                <label for="demo-priority-normal">Normal</label>
+                            </div>
+                            <div class="col-4 col-12-small">
+                                <input type="radio" id="demo-priority-high" name="demo-priority">
+                                <label for="demo-priority-high">High</label>
+                            </div>
+                            <!-- Break -->
+                            <div class="col-6 col-12-small">
+                                <input type="checkbox" id="demo-copy" name="demo-copy">
+                                <label for="demo-copy">Email me a copy</label>
+                            </div>
+                            <div class="col-6 col-12-small">
+                                <input type="checkbox" id="demo-human" name="demo-human" checked>
+                                <label for="demo-human">I am a human</label>
+                            </div>
+                            <!-- Break -->
+                            <div class="col-12">
+                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                            </div>
+                            <!-- Break -->
+                            <div class="col-12">
+                                <ul class="actions">
+                                    <li><input type="submit" value="Send Message" class="primary" /></li>
+                                    <li><input type="reset" value="Reset" /></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
 
                                                 <!-- Image -->
                                                     <h3>Image</h3>
 
                                                     <h4>Fit</h4>
-                                                    <span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span>
+                                                    <span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span>
                                                     <div class="box alt">
                                                         <div class="row gtr-50 gtr-uniform">
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
                                                             <!-- Break -->
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
                                                             <!-- Break -->
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
-                                                            <div class="col-4"><span class="image fit"><img src="https://www.fillmurray.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
+                                                            <div class="col-4"><span class="image fit"><img src="https://loremflickr.com/500/300" alt="" /></span></div>
                                                         </div>
                                                     </div>
 
                                                     <h4>Left &amp; Right</h4>
-                                                    <p><span class="image left"><img src="https://www.fillmurray.com/500/300" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-                                                    <p><span class="image right"><img src="https://www.fillmurray.com/500/300" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                                                    <p><span class="image left"><img src="https://loremflickr.com/500/300" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+                                                    <p><span class="image right"><img src="https://loremflickr.com/500/300" alt="" /></span>Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
 
                                                 <!-- Box -->
                                                     <h3>Box</h3>
