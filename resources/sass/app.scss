@@ -1,15 +1,23 @@
 
+/**
+ * --------------------------------------------------------------------------
+ * app.scss
+ * Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+ * Neste arquivo são efetuadas as chamadas a todas as dependências SASS
+ * --------------------------------------------------------------------------
+ */
+
 // Web Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-@import "~bootstrap/scss/bootstrap";
+// Fontawesome
+@import "./fontawesome/index";
 
-// Font Awesome 5
-$fa-font-path: "/admin/fonts/fontawesome5" !default;
-@import "~@fortawesome/fontawesome-free/scss/regular";
-@import "~@fortawesome/fontawesome-free/scss/solid";
-@import "~@fortawesome/fontawesome-free/scss/brands";
-@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+// Bootstrap
+@import "./bootstrap/index";
 
+// Componentes adicionais
+@import "./jquery-confirm/index";
 
-main { display: block; }
+// Implementações do site
+@import "./site";

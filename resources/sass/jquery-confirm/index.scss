@@ -1,23 +1,15 @@
 
-/*
-
-    A biblioteca jquery-confirm não possui uma versão sass
-    Por isso este arquivo é necessário!!
-
-    Trata-se de uma cópia do arquivo encontrado em
-    node_modules/jquery-confirm/css/jquery-confirm.css
-
-*/
-
-/*!
- * jquery-confirm v3.3.2 (http://craftpip.github.io/jquery-confirm/)
- * Author: boniface pereira
- * Website: www.craftpip.com
- * Contact: hey@craftpip.com
- *
- * Copyright 2013-2017 jquery-confirm
- * Licensed under MIT (https://github.com/craftpip/jquery-confirm/blob/master/LICENSE)
+/**
+ * --------------------------------------------------------------------------
+ * jQuery Confirm v3.3.2
+ * Copyright (c) 2013-2017 Boniface Pereira (http://craftpip.github.io)
+ * --------------------------------------------------------------------------
+ * Este arquivo contém as funcionalidades SASS do jQuery Confirm.
+ * A biblioteca jquery-confirm não possui uma versão SASS para os estilos.
+ * Este arquivo contem uma cópia do arquivo CSS encontrado em
+ * node_modules/jquery-confirm/css/jquery-confirm.css
  */
+
 @-webkit-keyframes jconfirm-spin {
   from {
     -webkit-transform: rotate(0deg);

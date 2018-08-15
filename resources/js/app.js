@@ -1,44 +1,34 @@
 
-
 /**
- * Carregamento inicial
+ * --------------------------------------------------------------------------
+ * app.js
+ * Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
+ * Neste arquivo são efetuadas as chamadas a todas as dependências javascript
+ * --------------------------------------------------------------------------
  */
-require('./boot');
 
-/**
- * Carregamento de todas as bibliotecas de dependencia javascript do projeto.
- */
-require('jquery-confirm');
-require('@fortawesome/fontawesome-free/js/all.js'); // transforma os <i> em <svg>
+window._ = require('lodash');
 
-/**
- * Objeto Admin
- */
-var App = window.App = {
+try {
 
-    init: function()
-    {
-        console.log('hohoho');
-    }
+    // Retro-compatibilidade
+    require('html5shiv');
 
-};
+    // Bibliotecas globais
+    window.$ = window.jQuery = require('jquery');
+    window.axios = require('axios');
+    window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-$(document).ready(function () {
-    App.init();
-});
+    // Fontawesome
+    require('./fontawesome/index');
 
-// Quando a janela estiver sendo redimensionada,
-// redomensiona os elementos apenas quando o
-// evento de redimensionamento da janela terminar
-var rtime;
-var timeout = false;
-var delta = 200;
-$(window).resize(function () {
-    rtime = new Date();
-    if (timeout === false) {
-        timeout = true;
-        setTimeout(function () {
-            // panel.resizeLayout();
-        }, delta);
-    }
-});
+    // Bootstrap
+    require('./bootstrap/index');
+
+    // Componentes adicionais
+    require('./jquery-confirm/index');
+
+    // Implementações do site
+    require('./site');
+
+} catch (e) {}
