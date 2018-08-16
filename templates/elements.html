@@ -528,58 +528,128 @@
                     <!-- Form -->
                     <h3>Form</h3>
 
-                    <form method="post" action="#">
-                        
-                        <div class="row gtr-uniform">
-                            <div class="col-6 col-12-xsmall">
-                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                    <form method="post" action="#" class="row">
+
+                        <div class="form-group col-12 col-md-6">
+                            <label for="name">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name"
+                                   aria-describedby="name-help" placeholder="Entre com o nome">
+                            <small id="name-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                            <label for="email">E-mail</label>
+                            <input type="text" class="form-control" id="email" name="email"
+                                   aria-describedby="email-help" placeholder="Entre com o email">
+                            <small id="email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group col-12">
+                            <label for="plans">Planos</label>
+                            <select class="form-control" id="plans" name="plans"
+                                    aria-describedby="plans-help">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            <small id="plans-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                            <label for="disabledTextInput">Disabled input</label>
+                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" disabled>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                            <label for="disabledSelect">Disabled select menu</label>
+                            <select id="disabledSelect" class="form-control" disabled>
+                                <option>Disabled select</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">
+                                Default checkbox
+                                </label>
                             </div>
-                            <div class="col-6 col-12-xsmall">
-                                <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                                <label class="form-check-label" for="defaultCheck2">
+                                Disabled checkbox
+                                </label>
                             </div>
-                            <!-- Break -->
-                            <div class="col-12">
-                                <select name="demo-category" id="demo-category">
-                                    <option value="">- Category -</option>
-                                    <option value="1">Manufacturing</option>
-                                    <option value="1">Shipping</option>
-                                    <option value="1">Administration</option>
-                                    <option value="1">Human Resources</option>
-                                </select>
+                        </div>
+
+                        <div class="form-group col-12 col-md-6">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                Default radio
+                                </label>
                             </div>
-                            <!-- Break -->
-                            <div class="col-4 col-12-small">
-                                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                                <label for="demo-priority-low">Low</label>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                Second default radio
+                                </label>
                             </div>
-                            <div class="col-4 col-12-small">
-                                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                                <label for="demo-priority-normal">Normal</label>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                                <label class="form-check-label" for="exampleRadios3">
+                                Disabled radio
+                                </label>
                             </div>
-                            <div class="col-4 col-12-small">
-                                <input type="radio" id="demo-priority-high" name="demo-priority">
-                                <label for="demo-priority-high">High</label>
-                            </div>
-                            <!-- Break -->
-                            <div class="col-6 col-12-small">
-                                <input type="checkbox" id="demo-copy" name="demo-copy">
-                                <label for="demo-copy">Email me a copy</label>
-                            </div>
-                            <div class="col-6 col-12-small">
-                                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                                <label for="demo-human">I am a human</label>
-                            </div>
-                            <!-- Break -->
-                            <div class="col-12">
-                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                            </div>
-                            <!-- Break -->
-                            <div class="col-12">
-                                <ul class="actions">
-                                    <li><input type="submit" value="Send Message" class="primary" /></li>
-                                    <li><input type="reset" value="Reset" /></li>
-                                </ul>
-                            </div>
+                        </div>
+
+                        <div class="form-check form-check-inline col">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                          <label class="form-check-label" for="inlineCheckbox1">Opção Um</label>
+                        </div>
+                        <div class="form-check form-check-inline col">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                          <label class="form-check-label" for="inlineCheckbox2">Opção dois</label>
+                        </div>
+                        <div class="form-check form-check-inline col">
+                          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                          <label class="form-check-label" for="inlineCheckbox3">Opção três (disabled)</label>
+                        </div>
+
+                        <div class="mt-2 w-100"></div>
+
+                        <div class="form-check form-check-inline col">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Opção Um</label>
+                        </div>
+
+                        <div class="form-check form-check-inline col">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Opção Dois</label>
+                        </div>
+
+                        <div class="form-check form-check-inline col">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                            <label class="form-check-label" for="inlineRadio3">Opção Três (disabled)</label>
+                        </div>
+
+                        <div class="mt-4 w-100"></div>
+
+                        <div class="form-group col-12">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                                <li><input type="reset" value="Reset" /></li>
+                            </ul>
                         </div>
                     </form>
 
