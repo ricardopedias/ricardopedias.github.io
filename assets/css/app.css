@@ -9266,6 +9266,10 @@ input[type="button"].btn-block {
   content: "Browse";
 }
 
+.custom-file-input:lang(pt) ~ .custom-file-label::after {
+  content: "Navegar";
+}
+
 .custom-file-label {
   position: absolute;
   top: 0;
