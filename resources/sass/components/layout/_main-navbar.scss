@@ -1,0 +1,128 @@
+body > nav.navbar {
+
+    // Botão mobile
+    & .navbar-toggler[aria-expanded="false"] {
+        background: rgba($primary, .5);
+    }
+
+    & .navbar-toggler[aria-expanded="true"],
+    & .navbar-toggler:hover {
+        background: $primary;
+    }
+
+    & .navbar-brand {
+        margin-right: 0 !important;
+    }
+
+    & .navbar-brand,
+    & .nav-link {
+
+        line-height: 50px;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-right: 10px !important; // Substitui o valor original do bootstrap 0.5rem
+        padding-left: 10px !important; // Substitui o valor original do bootstrap 0.5rem
+        position: relative;
+
+        @include border-radius(5px);
+        @include transition(background .5s);
+
+        &::before {
+            background-color: $primary;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            margin-left: -10px;
+            position: absolute;
+            width: 0%;
+
+            @include transition(height .2s);
+            @include transition(width .2s);
+        }
+
+    }
+
+    & .nav-link {
+
+        &:hover {
+
+            background: rgba(0,0,0,0.1);
+            color: #fff !important;
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    & .navbar-nav {
+        border-top: 1px solid lighten($dark, 2%);
+        display: block;
+        margin-top: 5px;
+        padding-top: 8px;
+    }
+
+    & .nav-item {
+        display: block;
+        float: left;
+        width: 50%;
+        text-align: center;
+        white-space: nowrap; // para não ter linebreaks
+    }
+
+    @include media-breakpoint-up(sm) {
+
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+
+        & .navbar-nav {
+            border-top: 0;
+            display: flex;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        & .nav-item {
+            float: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        & .navbar-brand {
+            display: none;
+        }
+
+        & .navbar-brand,
+        & .nav-link {
+
+            @include border-radius(0px);
+
+            &::before {
+                background-color: $primary;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 0;
+                margin-left: -10px;
+                position: absolute;
+                width: 100%;
+
+                @include transition(height .2s);
+            }
+
+            &:hover {
+
+                &::before {
+                    height: 5px;
+                }
+            }
+
+        }
+
+        & .dropdown.show .nav-link::before {
+            border-bottom-width: 0 !important;
+        }
+
+    }
+}

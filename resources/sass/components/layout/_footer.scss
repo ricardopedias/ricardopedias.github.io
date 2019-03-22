@@ -1,0 +1,148 @@
+body > footer {
+
+    background: $footer;
+
+    & .branding {
+
+        text-align: center;
+        padding-bottom: 0 !important;
+
+        & img {
+            max-height: 50px;
+        }
+    }
+
+    ul.col {
+
+        list-style: none;
+        padding: 10px;
+        margin-bottom: 0; // margem do ul
+
+        & li {
+
+            & h6,
+            & a {
+                display: block;
+                line-height: 40px;
+                padding-left: 0;
+                margin-bottom: 0; // margem do h6
+                white-space: nowrap; // para não ter linebreaks
+
+                @include media-breakpoint-up(sm) {
+                    white-space: normal;
+                }
+            }
+
+            & h6 {
+                color: lighten($footer, 80%);
+                text-align: center;
+            }
+
+            & a {
+
+                color: lighten($footer, 40%);
+                position: relative;
+                text-align: center;
+                @include border-radius(5px);
+                @include transition(background .2s);
+
+                &::before {
+                    background-color: $primary;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    margin-left: 0;
+                    position: absolute;
+                    width: 0%;
+
+                    @include transition(width .5s);
+                }
+
+                &:hover {
+                    background: darken($footer, 2%);
+                    color: lighten($footer, 80%);
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    @include media-breakpoint-up(sm) {
+
+        & .branding {
+            text-align: left;
+        }
+
+        ul.col {
+
+            & li {
+
+                & h6,
+                & a {
+                    padding-left: 15px;
+                    text-align: left;
+
+                    &::before {
+                        margin-left: -15px; // para ignorar o padding do li
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.copy {
+
+    background: $header;
+    color: lighten($header, 50%);
+
+    text-align: center;
+
+    & .social-networks {
+
+        text-align: center;
+
+        & a {
+
+            color: rgba($white, .25);
+            font-size: 28px;
+            line-height: 30px;
+
+            @include transition(color .5s);
+
+            & + a {
+                margin-left: 5px;
+            }
+
+            &:hover{
+                color: $primary;
+                transform: scale(1);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+
+        text-align: left;
+
+        & .social-networks {
+
+            text-align: right;
+
+            & a {
+
+                line-height: 50px;
+                font-size: 22px;
+
+            }
+
+        }
+    }
+}

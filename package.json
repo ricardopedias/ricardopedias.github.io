@@ -11,16 +11,20 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.2.0",
-        "bootstrap": "^4.0.0",
-        "bootstrap-datepicker": "^1.7.1",
+        "axios": "^0.18",
+        "bootstrap": "^4.1.3",
         "cross-env": "^5.1",
         "html5shiv": "^3.7.3",
-        "axios": "^0.16.2",
         "jquery": "^3.2",
-        "jquery-confirm": "^3.3.2",
-        "laravel-mix": "^2.0",
+        "laravel-mix": "^4.0.7",
+        "list.js": "1.5.0",
         "lodash": "^4.17.4",
-        "popper.js": "^1.12"
+        "popper.js": "^1.12",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.17.3",
+        "sass-loader": "^7.1.0",
+        "sweetalert2": "8.2.6",
+        "vue-template-compiler": "^2.6.9"
     },
     "dependencies": {}
 }

@@ -1,0 +1,18 @@
+
+// --------------------------------------------------------------------------
+// Layout do Site
+// Copyright (c) 2017-2018 Ricardo Pereira Dias
+// --------------------------------------------------------------------------
+
+// Layout padrão
+@import "header";
+@import "main-navbar";
+@import "main-navbar-dropdown";
+@import "main";
+@import "footer";
+
+// Componentes
+@import "slider";
+@import "timeline";
+@import "portfolio";
+@import "contact";

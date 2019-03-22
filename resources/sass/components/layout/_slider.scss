@@ -1,0 +1,76 @@
+body > .main-slider {
+
+    background: #007aeb;
+
+    & .carousel-item .img-fluid {
+        width: 100%;
+    }
+
+    & .carousel-item a {
+        display: block;
+        width: 100%;
+    }
+
+    & .carousel-control-prev,
+    & .carousel-control-next {
+
+        & span {
+            // .carousel-control-prev-icon
+            // .carousel-control-next-icon
+            width: 80px;
+            height: 80px;
+            color: #fff;
+
+            // Para usar o svg como 'data URI', é preciso codificá-lo:
+            // https://yoksel.github.io/url-encoder ou https://codepen.io/elliz/full/ygvgay
+            // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+            // background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0'?%3e%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132.29166 132.29167'%3e%3cg transform='translate(0,-164.70832)'%3e%3cpath fill='white' d='m 79.914062,173.38867 -30.537109,56.37891 30.537109,56.37695 3.515626,-1.9043 -29.503907,-54.47265 29.503907,-54.47461 z' /%3e%3c/g%3e%3c/svg%3e ");
+            background-image: none;
+
+            & svg {
+                fill: #fff !important;
+                -webkit-filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .5));
+                filter: drop-shadow( 0px 0px 5px rgba(0, 0, 0, .5));
+            }
+
+        }
+
+    }
+
+    @keyframes control_prev_animation {
+        0%, 10% {
+            transform: translate(0);
+        }
+        60% {
+            transform: translate(-20px)
+        }
+        100% {
+            transform: translate(0)
+        }
+    }
+
+    @keyframes control_next_animation {
+        0%, 10% {
+            transform: translate(0);
+        }
+        60% {
+            transform: translate(20px)
+        }
+        100% {
+            transform: translate(0)
+        }
+    }
+
+    & .carousel-control-prev:hover {
+        & span svg {
+            animation: control_prev_animation .5s infinite linear;
+        }
+    }
+
+    & .carousel-control-next:hover {
+        & span svg {
+            animation: control_next_animation .5s infinite linear;
+        }
+    }
+
+}

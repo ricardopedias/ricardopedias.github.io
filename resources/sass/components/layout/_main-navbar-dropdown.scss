@@ -1,0 +1,53 @@
+
+body > nav.navbar {
+
+    .nav-item.dropdown {
+        & a.dropdown-toggle::after {
+            @include transition(transform .5s);
+        }
+    }
+
+    .nav-item.dropdown.show {
+
+        background: $white;
+
+        & a.dropdown-toggle::after {
+            -ms-transform: rotate(180deg); /* IE 9 */
+            -webkit-transform: rotate(180deg); /* Safari */
+            transform: rotate(180deg);
+        }
+
+        & a,
+        & a:hover {
+
+            background: $white;
+            color: $dark !important; // Substitui o valor original do bootstrap #fff
+
+            &::before {
+                display: none;
+            }
+
+        }
+
+        & .dropdown-menu {
+
+            border: 0;
+            margin-top: -2px !important; // Substitui o valor original do bootstrap 0.125rem
+            padding: 0 !important; // Substitui o valor original do bootstrap 0.5rem 0
+
+            @include border-radius(0px);
+
+            & a {
+                padding: 0 !important;
+                padding-left: 15px !important;
+                line-height: 50px;
+
+                &:hover {
+                    background: $gray-200;
+                }
+            }
+        }
+
+    }
+
+}

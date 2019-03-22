@@ -1,0 +1,137 @@
+
+.main-contacts-map {
+
+    height: 280px; // Mobile
+    overflow:hidden;
+
+    & .col:first-child {
+        display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+
+        height: 300px; // Desktop
+        font-size: 42px;
+
+        & .col:first-child {
+            display: block;
+        }
+
+    }
+}
+
+.main-contacts {
+
+    height: auto; // Mobile
+    text-align: center;
+
+    & .row .col:last-child {
+        display: none;
+    }
+
+    @include media-breakpoint-up(md) {
+
+        height: 300px; // Desktop
+        margin-top: -300px;
+        text-align: center;
+
+        & .row .col:last-child {
+            display: block;
+        }
+
+    }
+
+    & .contact-forms {
+
+        font-size: 16px;
+        list-style: none;
+        padding-left: 0;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 30px;
+        }
+
+        & svg {
+            width: 20px;
+        }
+
+        & li:first-child {
+
+            font-size: 24px;
+
+        }
+
+    }
+
+    & .social-networks {
+
+        font-size: 32px;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 42px;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 42px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 56px;
+        }
+
+        & a {
+            @include transition(color .5s);
+        }
+
+        & .linkedin {
+
+            color: #0077B5;
+
+            &:hover {
+                color: darken(#0077B5, 20%);
+            }
+        }
+
+        & .medium {
+
+            color: #000000;
+
+            &:hover {
+                color: lighten(#000000, 20%);
+            }
+
+        }
+
+        & .stackexchange {
+
+            color: #F48024;
+
+            &:hover {
+                color: darken(#F48024, 20%);
+            }
+
+        }
+
+        & .twitter {
+
+            color: #00ACEE;
+
+            &:hover {
+                color: darken(#00ACEE, 10%);
+            }
+
+        }
+
+        & .github {
+
+            color: #24292e;
+
+            &:hover {
+                color: darken(#24292e, 20%);
+            }
+
+        }
+
+    }
+
+}

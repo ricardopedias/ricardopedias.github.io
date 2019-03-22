@@ -1,22 +1,44 @@
-/**
- * --------------------------------------------------------------------------
- * app.scss
- * Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
- * Neste arquivo são efetuadas as chamadas a todas as dependências SASS
- * --------------------------------------------------------------------------
- */
 
-// Web Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// Fontawesome
-@import "./fontawesome/index";
+@import 'components/fontawesome/index';
 
 // Bootstrap
-@import "./bootstrap/index";
+@import 'components/bootstrap/functions';
 
-// Componentes adicionais
-@import "./jquery-confirm/index";
+// Variables
+@import 'variables';
 
-// Implementações do site
-@import "./site";
+// Bootstrap
+@import 'components/bootstrap/index';
+
+// Layout
+@import 'components/layout/index';
+
+.bd-highlight {
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.15);
+}
+
+// Para corrigir o internet explorer
+main { display: block; }
+
+// Remove o outline de todos os campos
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd;
+}
+
+button, a, img { outline : none !important; }
+a { text-decoration: none !important; }

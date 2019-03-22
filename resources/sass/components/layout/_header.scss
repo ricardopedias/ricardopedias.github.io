@@ -1,0 +1,65 @@
+body > header {
+
+    background: $header;
+    background-image: none;
+    background-size: auto;
+    // background-image: url(assets/imgs/bg-header.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-size: cover;
+    background-position: center center;
+    border-top: 5px solid $primary;
+
+    .branding {
+
+        text-align: center;
+        padding-bottom: 0 !important;
+
+        & img {
+            max-height: 65px;
+        }
+    }
+
+    .social-networks {
+
+        text-align: center;
+
+        & a {
+
+            color: rgba($white, .25);
+            font-size: 28px;
+            line-height: 30px;
+
+            @include transition(color .5s);
+
+            & + a {
+                margin-left: 5px;
+            }
+
+            &:hover{
+                color: $primary;
+                transform: scale(1);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+
+        .branding {
+            text-align: left;
+        }
+
+        .social-networks {
+
+            text-align: right;
+
+            & a {
+
+                line-height: 65px;
+                font-size: 32px;
+
+            }
+
+        }
+    }
+}

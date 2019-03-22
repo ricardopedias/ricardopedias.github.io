@@ -1,34 +1,22 @@
 
 /**
- * --------------------------------------------------------------------------
- * app.js
- * Copyright (c) 2018 Ricardo Pereira Dias (https://rpdesignerfly.github.io)
- * Neste arquivo são efetuadas as chamadas a todas as dependências javascript
- * --------------------------------------------------------------------------
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
  */
 
-window._ = require('lodash');
+ // Retro-compatibilidade
+ require('html5shiv');
 
-try {
+ // Bibliotecas globais
+ window.$ = window.jQuery = window.jquery = require('jquery');
+ window.axios = require('axios');
+ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-    // Retro-compatibilidade
-    require('html5shiv');
+require('bootstrap');
+require('@fortawesome/fontawesome-free/js/all.js');
+window.smtpapi  = require('smtpapi');
 
-    // Bibliotecas globais
-    window.$ = window.jQuery = require('jquery');
-    window.axios = require('axios');
-    window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.List = require('list.js');
 
-    // Fontawesome
-    require('./fontawesome/index');
-
-    // Bootstrap
-    require('./bootstrap/index');
-
-    // Componentes adicionais
-    require('./jquery-confirm/index');
-
-    // Implementações do site
-    require('./site');
-
-} catch (e) {}
+require('./contact');

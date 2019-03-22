@@ -1,0 +1,78 @@
+
+$main-header-bg: #eeeeee;
+
+main > header {
+
+    background: $main-header-bg;
+
+    & h1,
+    & ul {
+        display: block;
+        float: left;
+        width: 50%;
+        height: 40px;
+    }
+
+    & h1 {
+        margin-bottom: 0;
+    }
+
+    $bread-gap: 6px;
+
+    & ul {
+
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0px;
+        text-align: right;
+
+        & li {
+
+            border-radius: 3px;
+            display: inline-block;
+            margin-left: 5px;
+            padding-left: $bread-gap;
+            padding-right: $bread-gap;
+            position: relative;
+
+            & + li {
+
+                &::before {
+                    color: darken($main-header-bg, 20%);
+                    content: "•";
+                    left: -$bread-gap;
+                    position: absolute;
+                }
+            }
+
+            &,
+            & a {
+                color: darken($main-header-bg, 30%);
+
+                &:hover {
+                    color: darken($main-header-bg, 50%);
+                }
+
+            }
+
+            &:last-child a {
+
+                font-weight: bold;
+                color: darken($main-header-bg, 60%) !important;
+            }
+
+        }
+
+        &::after {
+            display: block;
+            content: " ";
+            clear: both;
+        }
+    }
+
+    & p {
+        width: 100%;
+    }
+
+
+}
