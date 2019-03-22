@@ -1,0 +1,198 @@
+<?php
+
+function path_root($path = '')
+{
+    $ds = DIRECTORY_SEPARATOR;
+    $nodes = [];
+
+    if ($path != '') {
+        $path = trim($path, '/');
+        $path = str_replace('\\', $ds, $path); // compaibilidade com windows
+        $path = str_replace('/', $ds, $path);
+        $nodes = explode($ds, $path);
+    }
+
+    return implode($ds, array_merge([__DIR__], $nodes) );
+}
+
+function path_pages($path = '')
+{
+    return path_root('pages/' . $path);
+}
+
+function path_views($path = '')
+{
+    return path_root('resources/views/' . $path);
+}
+
+function path_views_pages($path = '')
+{
+    return path_root('resources/views/pages/' . $path);
+}
+
+/**
+ * Carrega um arquivo de template em uma string.
+ * @param  string $file
+ * @return string
+ */
+function load_template($file)
+{
+    return file_get_contents($file);
+}
+
+/**
+ * Identifica e captura as variáveis existentes no template
+ * @param  string $contents
+ * @return array
+ */
+function parse_vars($contents, & $parsedContents = '')
+{
+    $lines = explode("\n", $contents);
+
+    $nodes = [];
+    $vars = [];
+    $last_param = null;
+    foreach($lines as $item) {
+
+        $trimmed = trim($item);
+
+        if (empty($trimmed) == false && $trimmed{0} == '@' && $trimmed != '@end') {
+
+            // é uma abertura
+
+            preg_match('#^@([a-z]*).*$#', $trimmed, $nodes);
+            $param = $nodes[1];
+            $value = str_replace("@{$param}", '', $trimmed);
+
+            $last_param = $param;
+
+            // é um autofechamento
+            if (preg_match('#.*@end$#', $trimmed, $nodes) == true) {
+                $value = trim(str_replace("@end", '', $value));
+                $last_param = null;
+            }
+
+            $vars[$param] = $value;
+
+        } elseif (preg_match('#.*@([a-z]*)$#', $trimmed, $nodes) == true) {
+
+            // é um fechamento
+            $last_param = null;
+
+        } elseif($last_param != null) {
+
+            $vars[$param] .= empty($vars[$param])
+                ? $trimmed : " {$trimmed}";
+
+        } else {
+            $parsedContents .= $item . "\n";
+        }
+
+    }
+
+    return $vars;
+}
+
+/**
+ * Limpa as variáveis existentes no template
+ * @param  string $contents
+ * @return string
+ */
+function clear_vars($contents)
+{
+    $contentsCleaned = '';
+    parse_vars($contents, $contentsCleaned);
+
+    return $contentsCleaned;
+}
+
+/**
+ * Desenha o documento a partir do template.
+ *
+ * @param  string $file
+ * @param  array  $data
+ * @return string
+ */
+function render_document($template, $data = [])
+{
+    // Documento principal
+    $document = path_views('document.html');
+    $document = load_template($document);
+
+    // Template
+    $template = load_template($template);
+    $templateCleaned = '';
+
+    // Extrai as variaveis do template
+    $vars = parse_vars($template, $templateCleaned);
+    foreach($vars as $tag => $value) {
+        $data[$tag] = $value;
+    }
+    $data['contents'] = $templateCleaned;
+
+    // Substtitui as variaveis
+    foreach($data as $tag => $value) {
+        $document = preg_replace("#{{ $tag }}#", $value, $document);
+    }
+
+    // Remove variáveis não encontradas
+    $document = preg_replace("#{{\s?[a-z0-9\_-]*\s?}}#", '', $document);
+
+    return $document;
+}
+
+
+// --------------------------------------
+// Renderiza
+// --------------------------------------
+
+// INDEX
+$contents = render_document(path_views('index.html'));
+file_put_contents(path_root('index.html'), $contents, FILE_TEXT);
+
+// PAGES
+$pages = scandir(path_views_pages());
+foreach($pages as $item) {
+
+    if (in_array($item, ['.', '..'])) {
+        continue;
+    }
+
+    $orig_item = path_views_pages($item);
+    $dest_item = path_pages($item);
+
+    if (is_dir($orig_item)) {
+
+        // subitens
+
+        $dirname = basename($orig_item);
+        $sub_pages = scandir(path_views_pages($item));
+        foreach($sub_pages as $sub_item) {
+
+            if (in_array($sub_item, ['.', '..'])) {
+                continue;
+            }
+
+            $orig_subitem = path_views_pages("{$dirname}/{$sub_item}");
+            $dest_subitem = path_pages("{$dirname}/{$sub_item}");
+
+            if (is_file($orig_subitem)) {
+
+                @mkdir(dirname($dest_subitem));
+
+                echo "Renderizando {$dest_subitem}\n";
+                $contents = render_document($orig_subitem);
+                file_put_contents($dest_subitem, $contents, FILE_TEXT);
+            }
+        }
+
+    } elseif(is_file($orig_item)) {
+
+        echo "Renderizando {$dest_item}\n";
+        $contents = render_document($orig_item);
+        file_put_contents($dest_item, $contents, FILE_TEXT);
+    }
+
+}
+
+echo "Site renderizado com sucesso!\n";
