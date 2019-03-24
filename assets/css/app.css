@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
 @font-face {
   font-family: "Font Awesome 5 Free";
   font-style: normal;
@@ -13,6 +18,11 @@
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
 }
+
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 
 @font-face {
   font-family: "Font Awesome 5 Free";
@@ -29,6 +39,11 @@
   font-weight: 900;
 }
 
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
 @font-face {
   font-family: "Font Awesome 5 Brands";
   font-style: normal;
@@ -41,6 +56,11 @@
 .fab {
   font-family: "Font Awesome 5 Brands";
 }
+
+/*!
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 
 .fa,
 .fas,
@@ -326,6 +346,10 @@ readers do not read off random characters that represent icons */
 
 .fa-air-freshener:before {
   content: "\F5D0";
+}
+
+.fa-airbnb:before {
+  content: "\F834";
 }
 
 .fa-algolia:before {
@@ -664,6 +688,10 @@ readers do not read off random characters that represent icons */
   content: "\F241";
 }
 
+.fa-battle-net:before {
+  content: "\F835";
+}
+
 .fa-bed:before {
   content: "\F236";
 }
@@ -812,6 +840,10 @@ readers do not read off random characters that represent icons */
   content: "\F02E";
 }
 
+.fa-bootstrap:before {
+  content: "\F836";
+}
+
 .fa-bowling-ball:before {
   content: "\F436";
 }
@@ -862,6 +894,10 @@ readers do not read off random characters that represent icons */
 
 .fa-btc:before {
   content: "\F15A";
+}
+
+.fa-buffer:before {
+  content: "\F837";
 }
 
 .fa-bug:before {
@@ -1214,6 +1250,10 @@ readers do not read off random characters that represent icons */
 
 .fa-chrome:before {
   content: "\F268";
+}
+
+.fa-chromecast:before {
+  content: "\F838";
 }
 
 .fa-church:before {
@@ -1898,6 +1938,10 @@ readers do not read off random characters that represent icons */
 
 .fa-euro-sign:before {
   content: "\F153";
+}
+
+.fa-evernote:before {
+  content: "\F839";
 }
 
 .fa-exchange-alt:before {
@@ -2938,6 +2982,10 @@ readers do not read off random characters that represent icons */
 
 .fa-italic:before {
   content: "\F033";
+}
+
+.fa-itch-io:before {
+  content: "\F83A";
 }
 
 .fa-itunes:before {
@@ -4220,6 +4268,10 @@ readers do not read off random characters that represent icons */
   content: "\F267";
 }
 
+.fa-salesforce:before {
+  content: "\F83B";
+}
+
 .fa-sass:before {
   content: "\F41E";
 }
@@ -4592,6 +4644,10 @@ readers do not read off random characters that represent icons */
   content: "\F3F3";
 }
 
+.fa-speaker-deck:before {
+  content: "\F83C";
+}
+
 .fa-spider:before {
   content: "\F717";
 }
@@ -4810,6 +4866,10 @@ readers do not read off random characters that represent icons */
 
 .fa-swimming-pool:before {
   content: "\F5C5";
+}
+
+.fa-symfony:before {
+  content: "\F83D";
 }
 
 .fa-synagogue:before {
@@ -5488,6 +5548,14 @@ readers do not read off random characters that represent icons */
   content: "\F773";
 }
 
+.fa-wave-square:before {
+  content: "\F83E";
+}
+
+.fa-waze:before {
+  content: "\F83F";
+}
+
 .fa-weebly:before {
   content: "\F5CC";
 }
@@ -5634,6 +5702,10 @@ readers do not read off random characters that represent icons */
 
 .fa-yahoo:before {
   content: "\F19E";
+}
+
+.fa-yammer:before {
+  content: "\F840";
 }
 
 .fa-yandex:before {
@@ -16552,6 +16624,11 @@ body > nav.navbar .nav-item.dropdown.show .dropdown-menu a:hover {
   background: #e9ecef;
 }
 
+main {
+  display: block;
+  overflow: hidden;
+}
+
 main > header {
   background: #eeeeee;
 }
@@ -16561,7 +16638,6 @@ main > header ul {
   display: block;
   float: left;
   width: 50%;
-  height: 40px;
 }
 
 main > header h1 {
@@ -16569,6 +16645,7 @@ main > header h1 {
 }
 
 main > header ul {
+  height: 40px;
   list-style: none;
   margin-bottom: 0;
   padding-left: 0px;
@@ -16610,10 +16687,32 @@ main > header ul::after {
   display: block;
   content: " ";
   clear: both;
+  margin-top: 20px;
 }
 
 main > header p {
+  clear: both;
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 0;
+  text-align: center;
   width: 100%;
+}
+
+main > header p::before {
+  border-top: 1px solid #e1e1e1;
+  clear: both;
+  display: block;
+  padding-top: 20px;
+}
+
+@media (min-width: 576px) {
+  main > header p {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+  }
 }
 
 body > footer {
@@ -16875,8 +16974,10 @@ body > .main-slider .carousel-control-next:hover span svg {
   color: white;
   font-weight: bold;
   font-size: 12px;
-  line-height: 50px;
   height: 50px;
+  line-height: 50px;
+  min-height: 50px;
+  min-width: 50px;
   width: 50px;
   text-align: center;
   z-index: 2;

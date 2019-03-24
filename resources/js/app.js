@@ -15,7 +15,6 @@
 
 require('bootstrap');
 require('@fortawesome/fontawesome-free/js/all.js');
-window.smtpapi  = require('smtpapi');
 
 window.List = require('list.js');
 

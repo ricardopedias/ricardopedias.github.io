@@ -1,6 +1,11 @@
 
 $main-header-bg: #eeeeee;
 
+main {
+    display: block;
+    overflow: hidden;
+}
+
 main > header {
 
     background: $main-header-bg;
@@ -10,7 +15,6 @@ main > header {
         display: block;
         float: left;
         width: 50%;
-        height: 40px;
     }
 
     & h1 {
@@ -21,6 +25,7 @@ main > header {
 
     & ul {
 
+        height: 40px;
         list-style: none;
         margin-bottom: 0;
         padding-left: 0px;
@@ -67,11 +72,37 @@ main > header {
             display: block;
             content: " ";
             clear: both;
+            margin-top: 20px;
         }
     }
 
     & p {
+
+        &::before {
+
+            border-top: 1px solid darken($main-header-bg, 5%);
+            clear: both;
+            display: block;
+            padding-top: 20px;
+
+        }
+
+        clear: both;
+        display: block;
+        padding-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
         width: 100%;
+
+        @include media-breakpoint-up(sm) {
+
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
+            text-align: left;
+
+        }
+
     }
 
 
