@@ -17240,6 +17240,165 @@ body > .main-slider .carousel-control-next:hover span svg {
   top: -50%;
 }
 
+@media (min-width: 768px) {
+  body > main > article {
+    max-width: 740px !important;
+  }
+}
+
+body > main > article h2 {
+  margin-top: 56px;
+}
+
+body > main > article p {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
+  line-height: 1.58;
+  margin-bottom: 0;
+  margin-top: 29px;
+}
+
+body > main > article ul {
+  list-style: none;
+  list-style-image: none;
+  margin-top: 29px;
+  padding: 0;
+}
+
+body > main > article ul li {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  margin-left: 30px;
+  margin-bottom: 14px;
+}
+
+body > main > article ul li::before {
+  font-size: 16.8px;
+  padding-top: 4px;
+  padding-right: 15px;
+  content: "\2022";
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 78px;
+  margin-left: -78px;
+  text-align: right;
+}
+
+body > main > article figure {
+  display: block;
+  margin-top: 29px;
+}
+
+@media (min-width: 576px) {
+  body > main > article figure.center {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+
+body > main > article figure img {
+  width: 100%;
+}
+
+body > main > article figure figcaption {
+  color: rgba(0, 0, 0, 0.68);
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  font-feature-settings: "liga" on, "lnum" on;
+  -moz-font-feature-settings: "liga" on, "lnum" on;
+  -webkit-font-feature-settings: "liga" on, "lnum" on;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin-top: 10px;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+}
+
+body > main > article .social-networks {
+  font-size: 32px;
+}
+
+@media (min-width: 576px) {
+  body > main > article .social-networks {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  body > main > article .social-networks {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 992px) {
+  body > main > article .social-networks {
+    font-size: 56px;
+  }
+}
+
+body > main > article .social-networks a {
+  transition: color 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body > main > article .social-networks a {
+    transition: none;
+  }
+}
+
+body > main > article .social-networks .linkedin {
+  color: #0077B5;
+}
+
+body > main > article .social-networks .linkedin:hover {
+  color: #00344f;
+}
+
+body > main > article .social-networks .medium {
+  color: #000000;
+}
+
+body > main > article .social-networks .medium:hover {
+  color: #333333;
+}
+
+body > main > article .social-networks .stackexchange {
+  color: #F48024;
+}
+
+body > main > article .social-networks .stackexchange:hover {
+  color: #a95009;
+}
+
+body > main > article .social-networks .twitter {
+  color: #00ACEE;
+}
+
+body > main > article .social-networks .twitter:hover {
+  color: #0087bb;
+}
+
+body > main > article .social-networks .github {
+  color: #24292e;
+}
+
+body > main > article .social-networks .github:hover {
+  color: black;
+}
+
 .main-contacts-map {
   height: 280px;
   overflow: hidden;
@@ -17371,6 +17530,18 @@ body > .main-slider .carousel-control-next:hover span svg {
 
 .main-contacts .social-networks .github:hover {
   color: black;
+}
+
+body .articles-list .card {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  body .articles-list .card {
+    margin-top: 30px;
+    height: 500px;
+  }
 }
 
 .bd-highlight {

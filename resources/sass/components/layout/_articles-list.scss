@@ -1,0 +1,16 @@
+body .articles-list {
+
+    & .card {
+
+        margin-top: 30px;
+
+        overflow:hidden;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 30px;
+            height: 500px;
+        }
+
+    }
+
+}

@@ -1,0 +1,165 @@
+
+body > main > article {
+
+    @include media-breakpoint-up(md) {
+        max-width: 740px !important;
+    }
+
+    & h2 {
+        margin-top: 56px;
+    }
+
+    & p {
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: .01rem;
+        line-height: 1.58;
+        margin-bottom: 0;
+        margin-top: 29px;
+    }
+
+    & ul {
+
+        list-style: none;
+        list-style-image: none;
+        margin-top: 29px;
+        padding: 0;
+
+        & li {
+            
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px;
+            line-height: 1.58;
+            letter-spacing: -.003em;
+            margin-left: 30px;
+            margin-bottom: 14px;
+
+            &::before {
+                font-size: 16.8px;
+                padding-top: 4px;
+                padding-right: 15px;
+                content: '\2022';
+                position: absolute;
+                display: inline-block;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                width: 78px;
+                margin-left: -78px;
+                text-align: right;
+            }
+        }
+    }
+
+    & figure {
+
+        display: block;
+        margin-top: 29px;
+
+        &.center {
+
+            @include media-breakpoint-up(sm) {
+                padding-left: 25%;
+                padding-right: 25%;
+            }
+        }
+
+        & img {
+            width: 100%;
+        }
+
+        & figcaption {
+            color: rgba(0,0,0,.68);
+            font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            font-feature-settings: "liga" on,"lnum" on;
+            -moz-font-feature-settings: "liga" on,"lnum" on;
+            -webkit-font-feature-settings: "liga" on,"lnum" on;
+            left: 0;
+            letter-spacing: 0;
+            line-height: 1.4;
+            margin-top: 10px;
+            outline: 0;
+            position: relative;
+            text-align: center;
+            top: 0;
+            width: 100%;
+            z-index: 300;
+        }
+    }
+
+
+    & .social-networks {
+
+        font-size: 32px;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 42px;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 42px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 56px;
+        }
+
+        & a {
+            @include transition(color .5s);
+        }
+
+        & .linkedin {
+
+            color: #0077B5;
+
+            &:hover {
+                color: darken(#0077B5, 20%);
+            }
+        }
+
+        & .medium {
+
+            color: #000000;
+
+            &:hover {
+                color: lighten(#000000, 20%);
+            }
+
+        }
+
+        & .stackexchange {
+
+            color: #F48024;
+
+            &:hover {
+                color: darken(#F48024, 20%);
+            }
+
+        }
+
+        & .twitter {
+
+            color: #00ACEE;
+
+            &:hover {
+                color: darken(#00ACEE, 10%);
+            }
+
+        }
+
+        & .github {
+
+            color: #24292e;
+
+            &:hover {
+                color: darken(#24292e, 20%);
+            }
+
+        }
+
+    }
+}
