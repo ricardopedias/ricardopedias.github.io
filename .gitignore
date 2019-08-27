@@ -1,7 +1,13 @@
 /nbproject
 /node_modules
-/vendor
 /.idea
 /mix-manifest.json
 /package-lock.json
-/composer.lock
+docker-compose.yml
+docker-mysql.cnf
+docker-nginx.conf
+docker-php.ini
+DockerfileMYSQL
+DockerfileNGINX
+DockerfilePHP
+

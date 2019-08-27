@@ -6,6 +6,8 @@ body > main > article {
     }
 
     & h2 {
+        color: $primary;
+        margin-bottom: 0;
         margin-top: 56px;
     }
 
@@ -27,7 +29,7 @@ body > main > article {
         padding: 0;
 
         & li {
-            
+
             font-weight: 400;
             font-style: normal;
             font-size: 21px;
@@ -88,6 +90,43 @@ body > main > article {
             top: 0;
             width: 100%;
             z-index: 300;
+        }
+    }
+
+    & .tags {
+
+        & ul {
+
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+
+            & li {
+
+                background-color: lighten($primary, 10%);
+                border: 1px solid $primary;
+                color: lighten($primary, 50%);
+
+                // background-color: lighten($black, 90%);
+                // border: 1px solid lighten($black, 85%);
+                border-bottom: none !important;
+                border-right: none !important;
+                border-radius: 15px;
+                // color: lighten($black, 20%);
+                display: inline-block;
+                font-size: 10px;
+                list-style: none;
+                padding: 2px 8px;
+                margin-left: 2px;
+                margin-top: 5px;
+
+                @include transition(background-color .5s, border .5s, color .2s);
+
+                &::before {
+                    display: none;
+                }
+
+            }
         }
     }
 
