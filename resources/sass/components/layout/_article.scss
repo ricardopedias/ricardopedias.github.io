@@ -9,6 +9,14 @@ body > main > article {
         color: $primary;
         margin-bottom: 0;
         margin-top: 56px;
+
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+
+        &.mobile-left {
+            text-align: left;
+        }
     }
 
     & p {
@@ -52,6 +60,29 @@ body > main > article {
                 text-align: right;
             }
         }
+
+        &.links {
+            & li {
+                font-weight: 400;
+                font-style: normal;
+                font-size: 16px;
+                line-height: 1;
+                letter-spacing: -.003em;
+                margin-left: 30px;
+
+                & a {
+                    color: $text;
+                }
+
+                & a:hover {
+                    color: $primary;
+                }
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
     }
 
     & figure {
@@ -67,8 +98,59 @@ body > main > article {
             }
         }
 
+        &.left {
+
+            @include media-breakpoint-up(sm) {
+                float: left;
+                padding-left: 0;
+                padding-right: 20px;
+            }
+        }
+
+        &.right {
+
+            @include media-breakpoint-up(sm) {
+                float: right;
+                padding-left: 20px;
+                padding-right: 0;
+            }
+        }
+
         & img {
             width: 100%;
+        }
+
+        &.figure-circled {
+
+            & img {
+                border-radius: 50%;
+                overflow: hidden;
+                border: none;
+                box-shadow: 1px 1px 0px 2px rgba(0,0,0, 0.6);
+            }
+            
+        }
+
+        &.percent25 {
+            
+            width: 25%;
+
+            @include media-breakpoint-down(sm) {
+                width: 100%;
+                padding-left: 25%;
+                padding-right: 25%;
+            }
+        }
+
+        &.percent50 {
+
+            width: 50%;
+
+            @include media-breakpoint-up(sm) {
+                width: 100%;
+                padding-left: 25%;
+                padding-right: 25%;
+            }
         }
 
         & figcaption {
