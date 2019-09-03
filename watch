@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Autor: Ricardo Pereira <contato@ricardopdias.com.br>
+# Site: https://www.ricardopdias.com.br
+# 
+# Este script serve para facilitar a visualização de
+# alterações no código fonte do site. A cada segundo, os 
+# templates e as páginas são recompilados automaticamente.
+# 
+
+watch -n 1 php render
