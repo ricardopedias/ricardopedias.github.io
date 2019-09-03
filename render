@@ -1,5 +1,13 @@
 <?php
 
+/*
+# Autor: Ricardo Pereira <contato@ricardopdias.com.br>
+# Site: https://www.ricardopdias.com.br
+# 
+# Este script recompila as páginas e templates do site,
+# publicando-as em arquivos html
+*/ 
+
 function path_root($path = '')
 {
     $ds = DIRECTORY_SEPARATOR;
