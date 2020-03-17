@@ -1,4 +1,5 @@
-<?php
+#!/usr/bin/env php
+<?php declare(strict_types=1);
 
 /*
 # Autor: Ricardo Pereira <contato@ricardopdias.com.br>
@@ -13,7 +14,7 @@ function path_root($path = '')
     $ds = DIRECTORY_SEPARATOR;
     $nodes = [];
 
-    if ($path != '') {
+    if ($path !== '') {
         $path = trim($path, '/');
         $path = str_replace('\\', $ds, $path); // compaibilidade com windows
         $path = str_replace('/', $ds, $path);
@@ -21,6 +22,12 @@ function path_root($path = '')
     }
 
     return implode($ds, array_merge([__DIR__], $nodes) );
+}
+
+function user_prefix(string $url) : string
+{
+    $levels = substr_count ($url, "/");
+    return "./" . str_repeat("../", $levels);
 }
 
 function path_pages($path = '')
@@ -129,6 +136,10 @@ function render_document($template, $data = [])
 
     // Template
     $template = load_template($template);
+    foreach($data as $tag => $value) {
+        $template = preg_replace("#{{ $tag }}#", $value, $template);
+    }
+
     $templateCleaned = '';
 
     // Extrai as variaveis do template
@@ -138,7 +149,7 @@ function render_document($template, $data = [])
     }
     $data['contents'] = $templateCleaned;
 
-    // Substtitui as variaveis
+    // Substitui as variaveis
     foreach($data as $tag => $value) {
         $document = preg_replace("#{{ $tag }}#", $value, $document);
     }
@@ -155,7 +166,7 @@ function render_document($template, $data = [])
 // --------------------------------------
 
 // INDEX
-$contents = render_document(path_views('index.html'));
+$contents = render_document(path_views('index.html'), ['url_prefix' => './']);
 file_put_contents(path_root('index.html'), $contents, FILE_TEXT);
 
 // PAGES
@@ -189,7 +200,7 @@ foreach($pages as $item) {
                 @mkdir(dirname($dest_subitem));
 
                 echo "Renderizando {$dest_subitem}\n";
-                $contents = render_document($orig_subitem);
+                $contents = render_document($orig_subitem, ['url_prefix' => '../']);
                 file_put_contents($dest_subitem, $contents, FILE_TEXT);
             }
         }
@@ -197,7 +208,7 @@ foreach($pages as $item) {
     } elseif(is_file($orig_item)) {
 
         echo "Renderizando {$dest_item}\n";
-        $contents = render_document($orig_item);
+        $contents = render_document($orig_item, ['url_prefix' => '../']);
         file_put_contents($dest_item, $contents, FILE_TEXT);
     }
 
