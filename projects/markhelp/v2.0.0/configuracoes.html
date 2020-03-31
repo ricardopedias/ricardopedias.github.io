@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Mark Help</title>
+
+        <meta name="description" content="Gerador de documentação feito em PHP">
+        <meta name="author" content="https://www.ricardopdias.com.br">
+
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="./assets/apple-touch-icon-precomposed.png">
+        <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+    <body>
+
+        <a href="https://github.com/ricardopedias/markhelp" class="github fork-1" target="_blank">
+            <img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+        </a>
+
+        <header>
+            <a class="logo" href="./index.html">
+                <span class="icon 1">
+                    <img src="./assets/logo.png" width="50" height="40" alt="Mark Help - Gerador de documentação">
+                </span>
+                <span class="name">Mark Help</span>
+                <span class="tagline">Gerador de documentação</span>
+            </a>
+
+            <div class='block-version-selector'><select class='version-select'><option value='master' >master</option><option value='v1.0.0' >v1.0.0</option><option value='v2.0.0' selected>v2.0.0</option><option value='v3.0.0' >v3.0.0</option></select></div>
+            
+        </header>
+
+        <input type="checkbox" id="menu">
+        <label for="menu" onclick>
+            <div class="closed">&#9776; Menu</div>
+            <div class="open">&#9776; Esconder Menu</div>
+        </label>
+
+        <main>
+
+            <menu>
+                
+                <div class='block-version-selector'><select class='version-select'><option value='master' >master</option><option value='v1.0.0' >v1.0.0</option><option value='v2.0.0' selected>v2.0.0</option><option value='v3.0.0' >v3.0.0</option></select></div>
+
+                <ul><li>
+<a href="./index.html">Principal</a>
+</li><ul><li>
+<a href="./instalando.html">Instalando</a>
+</li></ul><h2>Usando</h2><ul><li>
+<a href="./utilizar-como-biblioteca.html">Como biblioteca</a>
+</li><li>
+<a href="./utilizar-no-terminal.html">No terminal</a>
+</li></ul><ul><li>
+<a href="./como-ajudar.html">Ajude</a>
+</li>
+
+            </menu>
+
+            <article>
+                <h1>Personalizando e configurando</h1>
+<p>O MarkHelp é capaz de transformar qualquer projeto contendo arquivos markdown em HTML, formatando-os de uma forma padrão. Mas é possível personalizar várias coisas, de forma que a geração dos documentos se adapte às mais diversas necessidades.</p>
+<h2>1. Personalizando o menu lateral</h2>
+<p>Para personalizar o menu lateral basta adicionar um arquivo <code>menu.json</code> dentro do projeto markdown, ou especificar sua localização absoluta (caminho completo) diretamente no MarkHelp através da configuração avançada (que será abordada a seguir).</p>
+<p>Este arquivo deve possuir a seguinte formatação:</p>
+<pre><code class="language-json">{
+    &quot;Item Simples 1&quot; : &quot;item-um.md&quot;,
+    &quot;Item Simples 2&quot; : &quot;item-dois.md&quot;,
+
+    &quot;Titulo 1&quot; : {
+        &quot;Item Agrupado 1&quot; : &quot;Diretório Um/item-três.md&quot;,
+        &quot;Item Agrupado 2&quot; : &quot;Diretório Um/item-quatro.md&quot;
+    },
+
+    &quot;Título 2&quot;: {
+
+        &quot;Item Agrupado 3&quot; : {
+            &quot;Subitem 1&quot; : &quot;Diretório Dois/item-cinco.md&quot;,
+            &quot;Subitem 2&quot; : &quot;item-seis.md&quot;,
+            &quot;Subitem 3&quot; : &quot;item-sete.md&quot;
+        },
+
+        &quot;Item Agrupado 4&quot; : {
+            &quot;Subitem 4&quot; : &quot;Diretório Três/item-oito.md&quot;,
+            &quot;Subitem 5&quot; : &quot;Diretório Três/item-nove.md&quot;
+        }
+    }
+}
+</code></pre>
+<h3>Entendendo a estrutura</h3>
+<p>Analisando o objeto Json, vejamos o que significa cada item na estrutura:</p>
+<ol>
+<li>
+<strong>Nível 1</strong>: se o valor for uma url, esses itens serão renderizados diretamente no primeiro nível do menu;</li>
+<li>
+<strong>Nível 1 (objeto como valor)</strong>: se o valor for um outro objeto, os itens dele serão considerados <em>grupos de itens</em>. Isso significa que eles serão agrupados em um bloco delimitado por um título;</li>
+<li>
+<strong>Nível 2</strong>: se o valor for uma url, esses itens serão renderizados diretamente no menu, dentro da delimitação do título;</li>
+<li>
+<strong>Nível 2 (objeto como valor)</strong>: se o valor for um outro objeto, os itens dele serão considerados um <em>submenu</em>. Isso significa que eles estarão ocultos, devendo ser clicado no item para expandir os demais <em>sub-items</em>;</li>
+</ol>
+<p>Abaixo, um exemplo desta estrutura após a renderização.</p>
+<p><img src="images/menu-lateral.png" alt="Menu Lateral" /></p>
+<h2>2. Configurações avançadas</h2>
+<p>O MarkHelp possui várias configurações pontuais, que mudam seu comportamento no momento da renderização de páginas HTML.</p>
+<p>Essas configurações podem ser especificadas criando um arquivo <code>config.json</code> dentro do projeto markdown, ou especificando sua localização diretamente na <a href="./utilizar-como-biblioteca.html">implementação</a> ou na <a href="./utilizar-no-terminal.html">linha de comando</a> do MarkHelp.</p>
+<p>Abaixo, seguem todas elas:</p>
+<ul>
+<li>
+<strong>path.theme</strong>: define o caminho completo até o tema desejado. Os temas padrões se encontram no diretório <a href="https://github.com/ricardopedias/markhelp/tree/master/src/Themes/">src/Themes</a> do código fonte do MarkHelp. Você pode copiar este diretório, fazer as alterações desejadas no tema e passar seu caminho completo neste parâmetro de configuração;</li>
+<li>
+<strong>logo.status</strong>: define se o logotipo aparecerá ou não no cabeçalho das páginas HTML. Por padrão, o valor setado é <code>true</code>;</li>
+<li>
+<strong>project.name</strong>: define o nome do projeto ao qual a documentação renderizada se refere;</li>
+<li>
+<strong>project.slogan</strong>: define uma pequena frase, que aparecerá no cabeçalho, como slogan do projeto;</li>
+<li>
+<strong>project.description</strong>: define um texto descritivo para a documentação ser indexada pelos mecanismos de busca. Especifique no máximo 255 caracteres para uma boa descrição;</li>
+<li>
+<strong>project.images</strong>: define a localização do diretório de imagens (se o projeto possuir). A url pode ser passada de forma absoluta (caminho completo) ou de forma relativa, usando a tag especial      {{project}} como prefixo (por exemplo, '{{project}}/images'), indicando que o diretório está no projeto markdown;</li>
+<li>
+<strong>git.url</strong>: define a url para acessar o repositório do projeto;</li>
+<li>
+<strong>git.fork</strong>: define se a bandeira de &quot;Faça um fork&quot; deverá, ou não aparecer;</li>
+<li>
+<strong>copy.name</strong>: o nome da pessoa/instituição detentora dos direitos da documentação renderizada;</li>
+<li>
+<strong>copy.url</strong>: a url para o site da pessoa/instituição detentora dos direitos;</li>
+<li>
+<strong>support.menu</strong>: define o caminho absoluto para o arquivo <code>menu.json</code>. Por padrão, este arquivo será buscado no diretório do projeto markdown. Caso nenhuma das opções estiver presente, o menu lateral não será renderizado;</li>
+<li>
+<strong>support.document</strong>: especifica um documento HTML como base para a renderização das páginas. Por padrão, este documento é carregado automaticamente do diretório <a href="https://github.com/ricardopedias/markhelp/tree/master/src/Themes/default/support">support</a> do tema em uso;</li>
+<li>
+<strong>assets.styles</strong>: define um arquivo contendo os estilos css, para usar no lugar do contido no tema em uso;</li>
+<li>
+<strong>assets.scripts</strong>: define um arquivo contendo as rotinas javascript, para usar no lugar do contido no tema em uso;</li>
+<li>
+<strong>assets.logo.src</strong>: define o caminho completo até o logotipo da documentação. Este parâmetro é muito útil para personalizar a renderização e utilizar a identidade visual corretamente. Por padrão, o logotipo do MarkHelp será utilizado;</li>
+<li>
+<strong>assets.icon.favicon</strong>: define o caminho completo até o favicon da documentação. Por padrão, o ícone do MarkHelp será utilizado;</li>
+<li>
+<strong>assets.icon.apple</strong>: define o caminho completo até o apple-touch-icon da documentação. Por padrão, o ícone do MarkHelp será utilizado.</li>
+</ul>
+<blockquote>
+<p><strong>Observação</strong>: usando o MarkHelp para implementar em projetos PHP, é possível setar configurações pontuais, sem a necessidade de usar um arquivo <code>config.json</code>. Para mais informações, confira <a href="./utilizar-como-biblioteca.html">Implementando projetos PHP</a>.</p>
+</blockquote>
+<h2>Sumário</h2>
+<ul>
+<li>
+<a href="./index.html">Início</a>
+</li>
+<li>
+<a href="./instalando.html">Instalando o MarkHelp</a>
+</li>
+<li>
+<a href="./utilizar-como-biblioteca.html">Implementando projetos PHP</a>
+</li>
+<li>
+<a href="./utilizar-no-terminal.html">Utilizando no Terminal Linux</a>
+</li>
+<li>
+<a href="./configuracoes.html">Personalizando e Configurando</a>
+</li>
+<li>
+<a href="./como-ajudar.html">Quero ajudar o projeto</a>
+</li>
+</ul>
+
+            </article>
+        </main>
+
+        <footer>
+            <span>&copy; Copyright <a href="http://www.ricardopdias.com.br">Open Source</a>.</span>
+            <span>Criado com <a href="https://github.com/ricardopedias/markhelp">MarkHelp</a>.</span>
+        </footer>
+
+        <script src="./assets/scripts.js"></script>
+
+    </body>
+</html>
