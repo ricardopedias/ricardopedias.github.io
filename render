@@ -71,7 +71,7 @@ function parse_vars($contents, & $parsedContents = '')
 
         $trimmed = trim($item);
 
-        if (empty($trimmed) == false && $trimmed{0} == '@' && $trimmed != '@end') {
+        if (empty($trimmed) == false && $trimmed[0] == '@' && $trimmed != '@end') {
 
             // é uma abertura
 
