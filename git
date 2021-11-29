@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+# ./git - Acesso ao git via chave especial
+#
+# Para funcionarem, as chaves devem estar no diretório .ssh do usuario logado
+# Usar as chaves em outra localização não foi possível.
+
+# Caso ainda não existam, as seguintes chaves são geradas em ~/.ssh/:
+# id_ed25519.ddd-base     = identificacao
+# id_ed25519.ddd-base.pub = autorizacao = chave que vai no GitHUB
+#
+# -------
+# Comandos úteis
+# -------
+# Para ver quem de fato está se conectando:
+# ssh -vT git@github.com
+# 
+# Para ver se o usuario logado no sistema tem permissão
+# ssh -vT ricardopedias@github.com
+
+KEY_NAME="id_ed25519.ddd-base"
+KEY="$HOME/.ssh/$KEY_NAME"
+
+if [ ! -f "$KEY" ]; then
+    ssh-keygen -t ed25519 -C "contato@ricardopedias.com.br" -f "$KEY"
+    echo ""
+    echo "Adicione a seguinte chave no GitHUB:"
+    echo $(cat $KEY.pub)
+    echo ""
+    echo ""
+    exit 1
+fi
+
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/$KEY_NAME"
+git $@
